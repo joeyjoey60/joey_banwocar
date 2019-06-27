@@ -1,0 +1,13 @@
+server:
+  port: 9091   #\u670D\u52A1\u4E2D\u5FC3\u6CE8\u518C\u7AEF\u53E3
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    fetch-registry: false # \u662F\u5426\u68C0\u7D22\u670D\u52A1
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+     # \u9632\u6B62\u81EA\u5DF1\u6CE8\u518C\u81EA\u5DF1
+    register-with-eureka: false
+
